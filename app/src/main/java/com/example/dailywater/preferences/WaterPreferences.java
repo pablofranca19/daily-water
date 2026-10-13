@@ -1,4 +1,5 @@
 package com.example.dailywater.preferences;
+
 import android.content.Context;
 import android.content.SharedPreferences;
 
@@ -15,10 +16,10 @@ public class WaterPreferences {
 
     public WaterPreferences(Context context) {
         prefs = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
-        ChecareResetaDataDiaria();
+        checkAndResetDailyData();
     }
 
-    private void ChecareResetaDataDiaria() {
+    private void checkAndResetDailyData() {
         String today = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
         String lastDate = prefs.getString("last_date", "");
 
@@ -31,18 +32,15 @@ public class WaterPreferences {
         }
     }
 
-    // 2. Registrar Consumo (Adiciona no acumulado + Histórico)
-    public void adicionarConsumo(int ml) {
-        ChecareResetaDataDiaria();
+    // ATUALIZADO: Agora aceita o 'ml' e também a string formatada do registro ('recordEntry')
+    public void addConsumption(int ml, String recordEntry) {
+        checkAndResetDailyData();
 
         int currentAcc = getAccumulated();
         int newAcc = currentAcc + ml;
 
-        String time = new SimpleDateFormat("HH:mm", Locale.getDefault()).format(new Date());
-        String logEntry = time + " - " + ml + " ml";
-
         Set<String> history = new HashSet<>(prefs.getStringSet("history", new HashSet<>()));
-        history.add(logEntry);
+        history.add(recordEntry);
 
         prefs.edit()
                 .putInt("accumulated", newAcc)
