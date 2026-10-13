@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Daily Water</string>
+    <string name="default_title">Daily water consumption</string>
+    <string name="goal_exceeded_alert">Goal exceeded</string>
+
+    <string name="set_goal_button">Set water intake goal</string>
+
+    <string name="goal_screen_title">Daily goal</string>
+    <string name="goal_hint">Goal in ml (e.g. 2000)</string>
+    <string name="save_goal">Save goal</string>
+    <string name="invalid_goal">Enter a goal between 1 and 20000 ml</string>
+
+    <string name="amount_hint">Amount (ml)</string>
+    <string name="add_consumption">Add</string>
+    <string name="change_goal">Change goal</string>
+    <string name="invalid_amount">Enter an amount between 1 and 5000 ml</string>
+    <string name="total_format">Total: %1$d / %2$d ml</string>
+    <string name="goal_exceeded_message">Daily goal exceeded by %1$d ml</string>
+    <string name="record_format">%1$s   +%2$d ml   (total %3$d ml)</string>
 </resources>
