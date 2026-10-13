@@ -1,4 +1,4 @@
-package com.example.dailywater;
+package com.example.dailywater.preferences;
 import android.content.Context;
 import android.content.SharedPreferences;
 
