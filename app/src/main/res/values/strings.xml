@@ -1,20 +1,21 @@
 <resources>
-    <string name="app_name">Daily Water</string>
-    <string name="default_title">Daily water consumption</string>
-    <string name="goal_exceeded_alert">Goal exceeded</string>
+    <string name="app_name">Consumo de Água</string>
 
-    <string name="set_goal_button">Set water intake goal</string>
-
-    <string name="goal_screen_title">Daily goal</string>
-    <string name="goal_hint">Goal in ml (e.g. 2000)</string>
-    <string name="save_goal">Save goal</string>
-    <string name="invalid_goal">Enter a goal between 1 and 20000 ml</string>
-
-    <string name="amount_hint">Amount (ml)</string>
-    <string name="add_consumption">Add</string>
-    <string name="change_goal">Change goal</string>
-    <string name="invalid_amount">Enter an amount between 1 and 5000 ml</string>
+    <!-- Textos usados nas Classes Java (MainActivity, GoalActivity, WaterProgressView) -->
     <string name="total_format">Total: %1$d / %2$d ml</string>
-    <string name="goal_exceeded_message">Daily goal exceeded by %1$d ml</string>
-    <string name="record_format">%1$s   +%2$d ml   (total %3$d ml)</string>
+    <string name="record_format">%1$s +%2$d ml (total %3$d ml)</string>
+    <string name="invalid_amount">Insira um valor entre 1 e 5000 ml</string>
+    <string name="invalid_goal">Insira uma meta válida</string>
+    <string name="goal_exceeded_message">Meta diária ultrapassada em %1$d ml</string>
+    <string name="default_title">Consumo diário de água</string>
+    <string name="goal_exceeded_alert">Meta ultrapassada</string>
+
+    <!-- Textos usados nas telas XML (activity_main, activity_goal, activity_welcome) -->
+    <string name="goal_screen_title">Meta diária</string>
+    <string name="goal_hint">Meta (ml)</string>
+    <string name="save_goal">Salvar meta</string>
+    <string name="amount_hint">Volume (ml)</string>
+    <string name="add_consumption">Adicionar</string>
+    <string name="change_goal">Alterar meta</string>
+    <string name="set_goal_button">Definir meta</string>
 </resources>

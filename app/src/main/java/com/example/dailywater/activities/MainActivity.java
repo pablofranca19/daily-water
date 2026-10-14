@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
         int currentTotal = waterPreferences.getAccumulated() + amount;
 
-        // Formata a string do registro igual o seu amigo fez
+        // Formata a string do registro em Português
         String recordEntry = getString(R.string.record_format, time, amount, currentTotal);
 
         // Salva permanentemente utilizando a sua WaterPreferences
@@ -137,6 +137,7 @@ public class MainActivity extends AppCompatActivity {
         boolean exceeded = total > goal;
         alertText.setVisibility(exceeded ? View.VISIBLE : View.GONE);
         if (exceeded) {
+            // Calcula o excedente e exibe a mensagem em Português
             alertText.setText(getString(R.string.goal_exceeded_message, total - goal));
         }
     }
